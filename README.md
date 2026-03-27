@@ -49,7 +49,7 @@ The dashboard allows users to:
 - Monitor **alerts and warnings**  
 
 ### Dashboard Preview
-![Dashboard Screenshot](images/dashboard.png)
+![Dashboard Screenshot](https://github.com/subi0311/Medi-Twin/blob/dc8a2de7fc22690088820c3886db98299d9c60e7/Screenshot%202026-02-10%20022742.png)
 
 ---
 
@@ -88,6 +88,5 @@ The system uses IoT devices to collect patient data such as:
 - Advanced analytics and reporting  
 - Integration with hospital systems  
 
----
 
 ## Repository Structure
