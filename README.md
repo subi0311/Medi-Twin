@@ -37,7 +37,7 @@ MEDITWIN integrates **IoT devices, backend processing, and a web dashboard**:
 5. **Alerts** are generated for abnormal readings  
 
 ### Architecture Diagram
-![System Architecture](images/architecture.png)
+![System Architecture](https://github.com/subi0311/Medi-Twin/blob/0e6db206795db07d07c136b22e4886968b66d836/system.png)
 
 ---
 
