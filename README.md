@@ -61,7 +61,7 @@ The system uses IoT devices to collect patient data such as:
 - **Activity tracker**  
 
 ### IoT Device
-![IoT Device](images/iot-device.jpg)
+![IoT Device](https://github.com/subi0311/Medi-Twin/blob/e4891437166161ed51cbda06d21fc91571cb67ca/image.png)
 
 ---
 
