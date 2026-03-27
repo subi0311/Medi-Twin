@@ -1,0 +1,170 @@
+
+/* Centering container inside body (body already centers but keep safety) */
+.mt-login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Glass card */
+.mt-card {
+  width: 420px;
+  max-width: calc(100% - 40px);
+  padding: 44px 36px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  box-shadow:
+    0 30px 60px rgba(8, 7, 12, 0.6),      /* main outer shadow */
+    inset 0 1px 0 rgba(228, 24, 24, 0.02); /* subtle inner highlight */
+  color: #ffffff;
+  position: relative;
+  overflow: visible;
+}
+
+/* top glossy bar reflection (subtle) */
+.mt-card::before{
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: -6px;
+  height: 6px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(233, 17, 17, 0.02));
+  filter: blur(6px);
+  opacity: 0.7;
+}
+.stethoscope-icon {
+  font-size: 48px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+
+/* Logo area (stethoscope + title) */
+.mt-logo{
+  display:flex;
+  gap:0px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 28px;
+}
+
+.mt-icon{
+  flex: 0 0 auto;
+  width:34px;
+  height:34px;
+}
+
+.mt-title{
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.2px;
+}
+
+/* Form layout */
+.mt-form{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Inputs - soft rounded with faint stroke like reference */
+.mt-input{
+  width:100%;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(226, 13, 13, 0.01));
+  color: #ffffff;
+  outline: none;
+  font-size: 15px;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .08s ease;
+}
+
+/* placeholder color */
+.mt-input::placeholder{
+  color: rgba(255,255,255,0.55);
+}
+
+/* focus style */
+.mt-input:focus{
+  border-color: rgba(78, 224, 255, 0.55);
+  box-shadow: 0 6px 18px rgba(78, 224, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* "Forgot Password?" row align right */
+.mt-row{
+  display:flex;
+  justify-content:flex-end;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+.mt-forgot{
+  color: rgba(174, 226, 255, 0.95);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.mt-forgot:hover{
+  text-decoration: underline;
+}
+
+/* Big gradient button with soft inner shadow like reference */
+.mt-button{
+  margin-top: 6px;
+  width: 100%;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #1a62ff 0%, #7b4df0 50%, #f11923 100%);
+  box-shadow:
+    0 12px 24px rgba(239, 5, 52, 0.18),
+    inset 0 -6px 18px rgba(0,0,0,0.15);
+  transition: transform .16s ease, box-shadow .16s ease, opacity .12s ease;
+}
+
+.mt-button:hover{
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 36px rgba(199, 59, 87, 0.22),
+    inset 0 -6px 18px rgba(0,0,0,0.15);
+}
+.mt-register {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mt-register a {
+  color: #4ce0ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mt-register a:hover {
+  text-decoration: underline;
+}
+
+
+/* responsive: smaller screens reduce card width */
+@media (max-width: 480px) {
+  .mt-card {
+    padding: 32px 22px;
+  }
+  .mt-title { font-size: 20px; }
+}

@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1b1c22, #2b3a67);
+  color: #1b1c22;
+}
+
+/* Dashboard Layout */
+.mt-dashboard {
+  display: flex;
+  gap: 20px;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.mt-human-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.mt-human-model-wrapper {
+  position: relative;
+  width: 180px;
+}
+
+.human-image {
+  width: 100%;
+}
+
+
+/* Sidebar */
+.mt-sidebar {
+  flex: 0 0 220px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+}
+
+.mt-logo {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.mt-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mt-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #d9e1ff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.mt-sidebar nav a:hover,
+.mt-sidebar nav a.active {
+  background: linear-gradient(90deg, #4e6ef2, #6e9efb);
+  color: #fff;
+}
+
+/* Main Content */
+.mt-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* Top Section */
+.mt-body-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mt-human-model-wrapper {
+  flex: 2;
+  max-width: 350px;
+  min-width: 250px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.human-image {
+  width: 100%;
+  max-width: 260px;
+  object-fit: contain;
+}
+.mt-human-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.patient-label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.live-dot {
+  color: #00ff9d;
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+
+/* ID Icon */
+.mt-id-icon {
+  position: absolute;
+  top: 33px;
+  right: 10px;
+  background: linear-gradient(90deg, #4e6ef2, #6e9efb);
+  color: #fff;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mt-id-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Sensor Dots */
+.sensor-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: red;
+  cursor: pointer;
+}
+.blink{
+  animation : blink-animation 1s infinite;
+}
+@keyframes blink-animation{
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Live Sensor */
+.mt-live-sensor {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.mt-live-sensor h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;}
+
+.mt-live-sensor ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Bottom Section */
+.mt-bottom-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mt-trends {
+  flex: 1.5;
+  min-width: 250px;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.mt-trends h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mt-trends img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.view-full-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #aec9e4;
+  cursor: pointer;
+}
+
+.back-btn {
+  color: #007bff;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.full-chart-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.mt-files {
+  flex: 0.8;
+  min-width: 150px;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.mt-files h2 {
+    font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mt-upload-btn {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4e6ef2, #6e9efb);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mt-upload-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mt-dashboard {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .mt-sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 12px;
+  }
+  .mt-body-section,
+  .mt-bottom-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .mt-human-model-wrapper,
+  .mt-live-sensor,
+  .mt-trends,
+  .mt-files {
+    max-width: 100%;
+  }
+}
